@@ -1,0 +1,24 @@
+50
+1000
+20
+4
+0.7
+0.6
+0.6
+0.6
+0.6
+1000
+
+
+  ReadInput >> Nalleles;
+  ReadInput >> popSize;
+  ReadInput >> selectionBias;
+  ReadInput >> elitism;
+  ReadInput >> pcrossover;
+  ReadInput >> pmutation_pairPermutation;
+  ReadInput >> pmutation_ClusterPermutation;
+  ReadInput >> pmutation_Shift;
+  ReadInput >> pmutation_Inversion;
+  ReadInput >> Ngenerations;
+
+

@@ -1,0 +1,18 @@
+### old and simple makefile
+CC = g++
+CFLAGS = -Wall -O3 --std=c++11 -larmadillo -L/usr/lib/x86_64-linux-gnu/blas -L/usr/lib/x86_64-linux-gnu/lapack -lblas -llapack
+
+main.exe : main.o random.o GA.o
+	$(CC) random.o main.o GA.o -o main.exe
+
+main.o : main.cpp
+	$(CC) -c main.cpp -o main.o $(CFLAGS)
+
+random.o : ./src/random.cpp ./include/random.h
+	$(CC) -c ./src/random.cpp -o random.o $(CFLAGS)
+
+GA.o : ./src/GA.cpp ./include/GA.h
+	$(CC) -c ./src/GA.cpp -o GA.o $(CFLAGS)
+
+clean :
+	rm -f *.o main.exe seed.out
